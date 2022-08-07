@@ -18,7 +18,34 @@ td {
 </style>
 </head>
 <body>
+<h1>type maximun of multiplication </h1>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  max: <input type="text" name="fname"id='number'>
+  <input type="submit">
+</form>
 
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_POST['fname'];
+    if (empty($name)) {
+        
+        
+    } else {
+       $h=$name;
+       make_table($h);
+    }
+     
+    
+}
+?>
+    <?php
+
+
+
+function make_table($h){
+
+?>
     <table>
     
     <tr>
@@ -26,11 +53,12 @@ td {
        x
     </td>
     <?php
-    $h=12;
+    
+    ;
     $k=1;
     $x=0;
     $y=$h;
-    
+    //first line for loop
     while($k!=$h+1){ ?>
     
     <td style= color:red>
@@ -106,5 +134,13 @@ else{
 
 
 </table>
+<?php
+
+}
+
+
+?>
+ 
+    <script src="mathp.js"></script>
 </body>
 </html>
